@@ -29,14 +29,14 @@ public class ProductController {
         log.info("商品信息查询成功,内容为{}", JSON.toJSON(product));
         return product;
     }
-    @PutMapping  ("/product/{id}")
+    @PutMapping  ("/product/put")
     public Product PutMapping(@RequestBody Integer pid){
         log.info("delete {}",pid);
         Product product = productService.findByPid(pid);
         log.info("商品信息查询成功,内容为{}", JSON.toJSON(product));
         return product;
     }
-    @DeleteMapping("/product/{id}")
+    @DeleteMapping("/product/delete")
     public Product DeleteMapping(@RequestBody Integer pid){
         log.info("delete {}",pid);
         Product product = productService.findByPid(pid);
